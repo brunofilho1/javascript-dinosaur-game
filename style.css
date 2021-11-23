@@ -59,7 +59,7 @@ body {
 }
 
 .blockActive {
-    animation: animateBlock 1s linear infinite;
+    animation: animateBlock 1.65s linear infinite;
 }
 
 @keyframes animateBlock {
@@ -84,7 +84,7 @@ body {
     position: absolute;
     left: 0;
 
-    animation: animateRoad 1s linear infinite;
+    animation: none;
 }
 
 @keyframes animateRoad {
@@ -104,18 +104,17 @@ body {
     position: absolute;
     top: 30px;
 }
-#container #cloud {
+#container #cloud img {
     width: 2000px;
     height: 80px;
     position: absolute;
     left: -2000px;
 
-    animation: none;
 }
 
 @keyframes animateCloud {
     0% {
-        left: -200px;
+        left: -1800px;
     }
 
     100% {
