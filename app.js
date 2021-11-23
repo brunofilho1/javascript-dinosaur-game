@@ -12,7 +12,7 @@ let interval = null;
 let playerScore = 0;
 const scoreCounter = () => {
     playerScore++;
-    score.innerHTML = `Score <b>${playerScore}</b>`
+    score.innerHTML = `Score: <b>${playerScore}</b>`
 }
 
 window.addEventListener('keydown', (start) => {
@@ -30,7 +30,7 @@ window.addEventListener('keydown', (start) => {
 // Dinosaur jump
 
 window.addEventListener('keydown', (event) => {
-    if(event.key == 'ArrowUp') {
+    if(event.key == 'ArrowUp' || event.key == 'w') {
         if(dino.classList != 'dinoActive') {
             dino.classList.add('dinoActive');
 
