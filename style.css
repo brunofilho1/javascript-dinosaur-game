@@ -138,7 +138,13 @@ body {
     position: absolute;
     font-size: 70px;
     left: calc(50% - 181px);
-    top: calc(50% - 40px);
+    top: calc(10% - 40px);
+
+    text-align: center;
 
     color: #525252;
+}
+#gameOver p {
+    text-align: center;
+    font-size: 20px;
 }

@@ -4,7 +4,7 @@ let block = document.querySelector('#block');
 let road = document.querySelector('#road');
 let cloud = document.querySelector('#cloud');
 let score = document.querySelector('#score');
-let gameOver = document.querySelector('#cloud');
+let gameOver = document.querySelector('#gameOver');
 
 // Counter and CSS animations
 
@@ -52,6 +52,7 @@ let result = setInterval(() => {
     /* console.log('Block Left: ' + blockLeft); */
 
     if(dinoBottom <= 70 && blockLeft <= 70) {
+        gameOver.innerHTML = `Game Over \n <p>Você bateu ${playerScore} pontos.</p>`
         gameOver.style.display = 'block';
         block.classList.remove('blockActive')
         road.firstElementChild.style.animation = 'none';
