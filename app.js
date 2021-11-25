@@ -5,6 +5,7 @@ let road = document.querySelector('#road');
 let cloud = document.querySelector('#cloud');
 let score = document.querySelector('#score');
 let gameOver = document.querySelector('#gameOver');
+let controls = document.querySelector('#controls');
 
 // Counter and CSS animations
 
@@ -21,6 +22,7 @@ window.addEventListener('keydown', (start) => {
         block.classList.add('blockActive');
         road.firstElementChild.style.animation = 'animateRoad 1s linear infinite';
         cloud.firstElementChild.style.animation = 'animateCloud 20s linear infinite';
+        controls.style.display = 'none';
 
         let playerScore = 0;
         interval = setInterval(scoreCounter, 100);
@@ -51,7 +53,7 @@ let result = setInterval(() => {
     let blockLeft = parseInt(getComputedStyle(block).getPropertyValue('left'));
     /* console.log('Block Left: ' + blockLeft); */
 
-    if(dinoBottom <= 70 && blockLeft <= 70) {
+    if(dinoBottom <= 100 && blockLeft >= 20 && blockLeft <= 65) {
         gameOver.innerHTML = `Game Over \n <p>Você bateu ${playerScore} pontos.</p>`
         gameOver.style.display = 'block';
         block.classList.remove('blockActive')

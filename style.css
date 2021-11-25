@@ -8,6 +8,8 @@
 }
 
 body {
+    width: 100%;
+    height: 100%;
     display: grid;
     place-items: center;
     height: 100vh;
@@ -59,7 +61,7 @@ body {
 }
 
 .blockActive {
-    animation: animateBlock 1.65s linear infinite;
+    animation: animateBlock 1s linear infinite;
 }
 
 @keyframes animateBlock {
@@ -109,7 +111,7 @@ body {
     height: 80px;
     position: absolute;
     left: -2000px;
-
+    animation: none;
 }
 
 @keyframes animateCloud {
@@ -130,6 +132,17 @@ body {
     right: 0;
 }
 
+#controls {
+    display: flex;
+    flex-direction: column;
+}
+
+#controls p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 #gameOver {
     display: none;
 
@@ -147,4 +160,10 @@ body {
 #gameOver p {
     text-align: center;
     font-size: 20px;
+}
+
+@media screen and (max-width: 1220px) {
+    #container {
+        width: 800px;
+    }
 }
